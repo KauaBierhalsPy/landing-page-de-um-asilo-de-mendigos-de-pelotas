@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lar do Recomeço - Asilo de Mendigos de Pelotas</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Slick Carousel -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+    
+    <style>
+        .smooth-scroll {
+            scroll-behavior: smooth;
+        }
+        
+        .hero-slider .slick-dots {
+            bottom: 20px;
+        }
+        
+        .hero-slider .slick-dots li button:before {
+            font-size: 12px;
+            color: white;
+        }
+        
+        .hero-slider .slick-dots li.slick-active button:before {
+            color: #3B82F6;
+        }
+        
+        /* Custom styles for better mobile experience */
+        @media (max-width: 768px) {
+            .menu-items {
+                display: none;
+            }
+            
+            .mobile-menu-button {
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body class="smooth-scroll bg-gray-50 font-sans">
+    <!-- Header/Navbar -->
+    <header class="bg-blue-800 text-white shadow-md fixed w-full top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <h1 class="text-2xl font-bold">Lar do Recomeço</h1>
+            </div>
+            
+            <nav class="hidden md:flex space-x-6 menu-items">
+                <a href="#inicio" class="hover:text-blue-200 transition">Início</a>
+                <a href="#sobre" class="hover:text-blue-200 transition">Sobre</a>
+                <a href="#servicos" class="hover:text-blue-200 transition">Serviços</a>
+                <a href="#paginas" class="hover:text-blue-200 transition">Páginas Relacionadas</a>
+                <a href="#contato" class="hover:text-blue-200 transition">Contato</a>
+            </nav>
+            
+            <div class="flex items-center space-x-4">
+                <div class="relative hidden md:block">
+                    <input type="text" placeholder="Pesquisar..." class="py-1 px-3 rounded-full text-gray-800 text-sm w-40">
+                    <button class="absolute right-2 top-1 text-gray-500">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                        </svg>
+                    </button>
+                </div>
+                
+                <button class="mobile-menu-button md:hidden">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile menu (hidden by default) -->
+        <div class="mobile-menu hidden md:hidden bg-blue-800 px-4 py-2">
+            <a href="#inicio" class="block py-2 hover:text-blue-200 transition">Início</a>
+            <a href="#sobre" class="block py-2 hover:text-blue-200 transition">Sobre</a>
+            <a href="#servicos" class="block py-2 hover:text-blue-200 transition">Serviços</a>
+            <a href="#paginas" class="block py-2 hover:text-blue-200 transition">Páginas Relacionadas</a>
+            <a href="#contato" class="block py-2 hover:text-blue-200 transition">Contato</a>
+            
+            <div class="relative mt-2">
+                <input type="text" placeholder="Pesquisar..." class="py-1 px-3 rounded-full text-gray-800 text-sm w-full">
+                <button class="absolute right-2 top-1 text-gray-500">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Slider Section -->
+    <section id="inicio" class="hero-slider mt-16">
+        <div class="relative">
+            <img src="https://placeholder-image-service.onrender.com/image/1200x500?prompt=Exterior%20de%20um%20asilo%20bem%20cuidado%20com%20jardim%20e%20pessoas%20idosas%20socializando%20em%20Pelotas&id=slider1" alt="Exterior do Lar do Recomeço com jardim bem cuidado e residentes socializando" class="w-full h-auto">
+            <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
+                <div class="text-center text-white px-4">
+                    <h2 class="text-4xl font-bold mb-4">Bem-vindo ao Lar do Recomeço</h2>
+                    <p class="text-xl mb-6">Oferecendo cuidado e dignidade para aqueles que mais precisam em Pelotas</p>
+                    <button class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full transition">Saiba Mais</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="relative">
+            <img src="https://placeholder-image-service.onrender.com/image/1200x500?prompt=Interior%20aconchegante%20de%20asilo%20com%20idosos%20participando%20de%20atividades%20recreativas&id=slider2" alt="Interior aconchegante do asilo com idosos participando de atividades recreativas" class="w-full h-auto">
+            <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
+                <div class="text-center text-white px-4">
+                    <h2 class="text-4xl font-bold mb-4">Um Lugar para Chamar de Lar</h2>
+                    <p class="text-xl mb-6">Ambiente acolhedor e atividades que promovem bem-estar e socialização</p>
+                    <button class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full transition">Nossos Serviços</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="relative">
+            <img src="https://placeholder-image-service.onrender.com/image/1200x500?prompt=Volunt%C3%A1rios%20trabalhando%20em%20asilo%20distribuindo%20alimentos%20e%20conversando%20com%20idosos&id=slider3" alt="Voluntários distribuindo alimentos e conversando com os residentes do asilo" class="w-full h-auto">
+            <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
+                <div class="text-center text-white px-4">
+                    <h2 class="text-4xl font-bold mb-4">Junte-se à Nossa Causa</h2>
+                    <p class="text-xl mb-6">Seja um voluntário ou doe para transformar vidas em Pelotas</p>
+                    <button class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full transition">Como Ajudar</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sobre Nós Section -->
+    <section id="sobre" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-blue-800">Sobre o Lar do Recomeço</h2>
+            
+            <div class="flex flex-col md:flex-row items-center gap-8">
+                <div class="md:w-1/2">
+                    <img src="https://placeholder-image-service.onrender.com/image/600x400?prompt=Fundadores%20do%20asilo%20sorrindo%20com%20residentes%20em%20frente%20ao%20pr%C3%A9dio%20hist%C3%B3rico%20de%20Pelotas&id=sobre1" alt="Fundadores do Lar do Recomeço com residentes em frente ao prédio histórico" class="rounded-lg shadow-md w-full">
+                </div>
+                <div class="md:w-1/2">
+                    <h3 class="text-2xl font-semibold mb-4 text-blue-700">Nossa História</h3>
+                    <p class="text-gray-700 mb-4">
+                        O Lar do Recomeço foi fundado em 2005 com o objetivo de oferecer abrigo, alimentação e cuidados 
+                        para pessoas em situação de rua na cidade de Pelotas. Desde então, temos trabalhado incansavelmente 
+                        para restaurar a dignidade e oferecer novas oportunidades para aqueles que mais precisam.
+                    </p>
+                    <p class="text-gray-700 mb-6">
+                        Nossa missão é proporcionar um ambiente seguro, acolhedor e transformador, onde cada indivíduo 
+                        possa encontrar não apenas um teto, mas também esperança e perspectivas para um futuro melhor.
+                    </p>
+                    <button class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded transition">Conheça Nossa Equipe</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Serviços Section -->
+    <section id="servicos" class="py-16 bg-blue-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-blue-800">Serviços Oferecidos</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition">
+                    <div class="text-blue-600 mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Abrigo e Moradia</h3>
+                    <p class="text-gray-700">
+                        Oferecemos acomodações seguras e limpas para homens e mulheres, com camas individuais, 
+                        banheiros e áreas comuns bem conservadas.
+                    </p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition">
+                    <div class="text-blue-600 mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V5.5A2.5 2.5 0 109.5 8H12zm-7 4h14M5 12a2 2 0 110-4h14a2 2 0 110 4M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Alimentação Balanceada</h3>
+                    <p class="text-gray-700">
+                        Servimos três refeições nutritivas por dia, preparadas com ingredientes frescos e 
+                        seguindo orientações nutricionais adequadas.
+                    </p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition">
+                    <div class="text-blue-600 mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Apoio Psicossocial</h3>
+                    <p class="text-gray-700">
+                        Contamos com profissionais especializados para oferecer acompanhamento psicológico, 
+                        assistência social e orientação para reintegração familiar e comunitária.
+                    </p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition">
+                    <div class="text-blue-600 mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Atividades de Integração</h3>
+                    <p class="text-gray-700">
+                        Organizamos oficinas, grupos de convivência e atividades recreativas que promovem 
+                        a socialização e o desenvolvimento de habilidades.
+                    </p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition">
+                    <div class="text-blue-600 mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Encaminhamento para Saúde</h3>
+                    <p class="text-gray-700">
+                        Facilitamos o acesso a serviços de saúde, agendando consultas e exames em postos 
+                        de saúde e hospitais da rede pública de Pelotas.
+                    </p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition">
+                    <div class="text-blue-600 mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Orientação Profissional</h3>
+                    <p class="text-gray-700">
+                        Oferecemos capacitação básica e orientação para reinserção no mercado de trabalho, 
+                        com parcerias locais para oportunidades de emprego.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Páginas Relacionadas Section -->
+    <section id="paginas" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-blue-800">Páginas Relacionadas</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-blue-50 p-6 rounded-lg border-l-4 border-blue-600">
+                    <h3 class="text-xl font-semibold mb-3 text-blue-800">Parceiros e Apoiadores</h3>
+                    <p class="text-gray-700 mb-4">
+                        Conheça as empresas, organizações e pessoas que apoiam nosso trabalho e tornam possível 
+                        transformar vidas em Pelotas.
+                    </p>
+                    <a href="#" class="text-blue-600 font-semibold hover:underline">Ver Parceiros →</a>
+                </div>
+                
+                <div class="bg-blue-50 p-6 rounded-lg border-l-4 border-blue-600">
+                    <h3 class="text-xl font-semibold mb-3 text-blue-800">Depoimentos</h3>
+                    <p class="text-gray-700 mb-4">
+                        Histórias reais de transformação e recomeço de pessoas que encontraram no Lar do Recomeço 
+                        uma oportunidade para mudar suas vidas.
+                    </p>
+                    <a href="#" class="text-blue-600 font-semibold hover:underline">Ler Depoimentos →</a>
+                </div>
+                
+                <div class="bg-blue-50 p-6 rounded-lg border-l-4 border-blue-600">
+                    <h3 class="text-xl font-semibold mb-3 text-blue-800">Eventos e Campanhas</h3>
+                    <p class="text-gray-700 mb-4">
+                        Fique por dentro dos eventos beneficentes, campanhas de arrecadação e atividades 
+                        especiais que organizamos ao longo do ano.
+                    </p>
+                    <a href="#" class="text-blue-600 font-semibold hover:underline">Ver Agenda →</a>
+                </div>
+                
+                <div class="bg-blue-50 p-6 rounded-lg border-l-4 border-blue-600">
+                    <h3 class="text-xl font-semibold mb-3 text-blue-800">Relatórios e Transparência</h3>
+                    <p class="text-gray-700 mb-4">
+                        Acesso aos relatórios anuais, prestação de contas e informações sobre a aplicação 
+                        dos recursos recebidos por doações e parcerias.
+                    </p>
+                    <a href="#" class="text-blue-600 font-semibold hover:underline">Acessar Documentos →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contato Section -->
+    <section id="contato" class="py-16 bg-blue-800 text-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">Entre em Contato</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">Informações de Contato</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-3 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                            </svg>
+                            <div>
+                                <p class="font-semibold">Endereço</p>
+                                <p>Rua dos Anjos, 123 - Centro</p>
+                                <p>Pelotas - RS, 96010-000</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                            </svg>
+                            <div>
+                                <p class="font-semibold">Telefone</p>
+                                <p>(53) 3222-1234</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                            </svg>
+                            <div>
+                                <p class="font-semibold">Email</p>
+                                <p>contato@lardorecomeco.org.br</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-8">
+                        <h3 class="text-xl font-semibold mb-4">Horário de Funcionamento</h3>
+                        <p>Segunda a Sexta: 8h às 18h</p>
+                        <p>Sábados: 9h às 12h</p>
+                        <p>Domingos: Atendimento emergencial</p>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">Envie uma Mensagem</h3>
+                    <form class="space-y-4">
+                        <div>
+                            <label for="name" class="block mb-1">Nome Completo</label>
+                            <input type="text" id="name" class="w-full px-4 py-2 rounded text-gray-800" required>
+                        </div>
+                        
+                        <div>
+                            <label for="email" class="block mb-1">Email</label>
+                            <input type="email" id="email" class="w-full px-4 py-2 rounded text-gray-800" required>
+                        </div>
+                        
+                        <div>
+                            <label for="phone" class="block mb-1">Telefone</label>
+                            <input type="tel" id="phone" class="w-full px-4 py-2 rounded text-gray-800">
+                        </div>
+                        
+                        <div>
+                            <label for="message" class="block mb-1">Mensagem</label>
+                            <textarea id="message" rows="4" class="w-full px-4 py-2 rounded text-gray-800" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="bg-white text-blue-800 font-bold py-2 px-6 rounded hover:bg-blue-100 transition">Enviar Mensagem</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white pt-12 pb-6">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+                <!-- Publicações Populares -->
+                <div>
+                    <h3 class="text-xl font-semibold mb-4 border-b border-gray-700 pb-2">Publicações Populares</h3>
+                    <ul class="space-y-3">
+                        <li>
+                            <a href="#" class="hover:text-blue-300 transition">Como o voluntariado transforma vidas</a>
+                            <p class="text-sm text-gray-400">12 de Março, 2023</p>
+                        </li>
+                        <li class="mt-3">
+                            <a href="#" class="hover:text-blue-300 transition">Campanha do Agasalho 2023: Resultados</a>
+                            <p class="text-sm text-gray-400">5 de Junho, 2023</p>
+                        </li>
+                        <li class="mt-3">
+                            <a href="#" class="hover:text-blue-300 transition">Histórias de Recomeço: João encontrou emprego</a>
+                            <p class="text-sm text-gray-400">28 de Agosto, 2023</p>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Tags -->
+                <div>
+                    <h3 class="text-xl font-semibold mb-4 border-b border-gray-700 pb-2">Tags</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <a href="#" class="bg-gray-700 hover:bg-gray-600 px-3 py-1 rounded text-sm transition">Doações</a>
+                        <a href="#" class="bg-gray-700 hover:bg-gray-600 px-3 py-1 rounded text-sm transition">Voluntariado</a>
+                        <a href="#" class="bg-gray-700 hover:bg-gray-600 px-3 py-1 rounded text-sm transition">Eventos</a>
+                        <a href="#" class="bg-gray-700 hover:bg-gray-600 px-3 py-1 rounded text-sm transition">Campanhas</a>
+                        <a href="#" class="bg-gray-700 hover:bg-gray-600 px-3 py-1 rounded text-sm transition">Depoimentos</a>
+                        <a href="#" class="bg-gray-700 hover:bg-gray-600 px-3 py-1 rounded text-sm transition">Notícias</a>
+                        <a href="#" class="bg-gray-700 hover:bg-gray-600 px-3 py-1 rounded text-sm transition">Ações Sociais</a>
+                        <a href="#" class="bg-gray-700 hover:bg-gray-600 px-3 py-1 rounded text-sm transition">Parcerias</a>
+                    </div>
+                </div>
+                
+                <!-- Sobre Nós -->
+                <div>
+                    <h3 class="text-xl font-semibold mb-4 border-b border-gray-700 pb-2">Um Pouco Sobre Nós</h3>
+                    <p class="mb-4">
+                        O Lar do Recomeço é uma instituição sem fins lucrativos que acolhe pessoas em situação 
+                        de vulnerabilidade social em Pelotas, oferecendo abrigo, alimentação e oportunidades 
+                        para um novo começo.
+                    </p>
+                    <div class="flex space-x-3">
+                        <a href="#" class="text-blue-300 hover:text-white transition">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="text-blue-300 hover:text-white transition">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="text-blue-300 hover:text-white transition">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="text-blue-300 hover:text-white transition">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Contato -->
+                <div>
+                    <h3 class="text-xl font-semibold mb-4 border-b border-gray-700 pb-2">Contato</h3>
+                    <p class="mb-2">Rua dos Anjos, 123 - Centro</p>
+                    <p class="mb-2">Pelotas - RS, 96010-000</p>
+                    <p class="mb-2">(53) 3222-1234</p>
+                    <p class="mb-4">contato@lardorecomeco.org.br</p>
+                    
+                    <h4 class="font-semibold mb-2">Horário de Visitas</h4>
+                    <p>Segunda a Sexta: 14h às 17h</p>
+                    <p>Agendamento prévio necessário</p>
+                </div>
+            </div>
+            
+            <!-- Copyright -->
+            <div class="border-t border-gray-700 pt-6 mt-6 text-center text-sm text-gray-400">
+                <p>&copy; 2023 Lar do Recomeço - Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    
+    <script>
+        // Inicialização do Slick Slider
+        $(document).ready(function(){
+            $('.hero-slider').slick({
+                dots: true,
+                infinite: true,
+                speed: 500,
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                autoplay: true,
+                autoplaySpeed: 5000,
+                pauseOnHover: true,
+                adaptiveHeight: true
+            });
+            
+            // Mobile menu toggle
+            $('.mobile-menu-button').click(function() {
+                $('.mobile-menu').slideToggle();
+            });
+            
+            // Smooth scrolling for navigation links
+            $('a[href^="#"]').on('click', function(e) {
+                e.preventDefault();
+                
+                var target = this.hash;
+                var $target = $(target);
+                
+                $('html, body').animate({
+                    'scrollTop': $target.offset().top - 70
+                }, 800, 'swing', function() {
+                    window.location.hash = target;
+                });
+            });
+        });
+    </script>
+</body>
+</html>
